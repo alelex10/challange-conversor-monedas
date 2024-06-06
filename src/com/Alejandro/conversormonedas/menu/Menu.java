@@ -11,7 +11,7 @@ public class Menu {
     String moneda2="";
     double convercionObtenida=0;
     double cantidad=0;
-    protected void iniciar(){
+    public void iniciar(){
         do{
             System.out.println(opcionElegida==1?StringOpciones.principal():"");
             opcionElegida = opcionElegida==1?Seleccionar.opcion():opcionElegida;
