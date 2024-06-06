@@ -4,7 +4,7 @@ import com.Alejandro.conversormonedas.modelos.Moneda;
 
 public class StringOpciones {
 
-    public String principal(){
+    static String principal(){
         return """
              
                 ********************************
@@ -20,7 +20,7 @@ public class StringOpciones {
                 
                 Elija una opocion valida""";
     }
-    public String convercionDolares(){
+    static String convercionDolares(){
         return """
                 **************************************************************
                 1) %s - Peso argentino --> USD - Dólar
@@ -30,7 +30,7 @@ public class StringOpciones {
                 5) %s - Peso colombiano --> USD - Dólar
                 """.formatted(Moneda.monedasDisponibles.toArray());
     }
-    public String otrasConverciones(){
+    static String otrasConverciones(){
         return """          
                 **************************************************************
                 1) %s Peso argentino
@@ -50,7 +50,7 @@ public class StringOpciones {
     static public String convertirA(String moneda){
         return "que moneda desea convertir a %s:".formatted(moneda);
     }
-    public String cantidadAConvertir(String moneda1 , String moneda2){
+    public static String cantidadAConvertir(String moneda1, String moneda2){
         return "ingrese la cantidad que desee convertir de "+moneda1+" a "+moneda2;
     }
     static public String opcionesFinales(){

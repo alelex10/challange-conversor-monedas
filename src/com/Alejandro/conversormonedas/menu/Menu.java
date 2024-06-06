@@ -3,12 +3,9 @@ package com.Alejandro.conversormonedas.menu;
 import com.Alejandro.conversormonedas.modelos.Historial;
 import com.Alejandro.conversormonedas.servicio.Conversor;
 
-import java.util.Scanner;
-
 public class Menu {
-    Scanner teclado= new Scanner(System.in);
     public int opcionElegida=1;
-    StringOpciones stringOpciones =new StringOpciones();
+//    StringOpciones stringOpciones =new StringOpciones();
     Historial historial= new Historial();
     String moneda1="";
     String moneda2="";
@@ -16,21 +13,21 @@ public class Menu {
     double cantidad=0;
     protected void iniciar(){
         do{
-            System.out.println(opcionElegida==1?stringOpciones.principal():"");
+            System.out.println(opcionElegida==1?StringOpciones.principal():"");
             opcionElegida = opcionElegida==1?Seleccionar.opcion():opcionElegida;
             switch (opcionElegida){
                 case 0:
                     System.out.println("saliendo del programa");
                     break;
                 case 1 ://convercion a dolares
-                    System.out.println(stringOpciones.convercionDolares());
+                    System.out.println(StringOpciones.convercionDolares());
                     moneda1="USD";
                     System.out.println(StringOpciones.convertirA(moneda1));
                     moneda2= Seleccionar.moneda(true);
                     convercion(moneda1, moneda2);
                     break;
                 case 2 ://otras converciones
-                    System.out.println(stringOpciones.otrasConverciones());
+                    System.out.println(StringOpciones.otrasConverciones());
                     moneda1= Seleccionar.moneda(false);
                     System.out.println(StringOpciones.convertirA(moneda1));
                     moneda2= Seleccionar.moneda(false);
@@ -48,10 +45,10 @@ public class Menu {
         }while (opcionElegida != 0);
     }
     private void convercion(String moneda1, String moneda2){
-        System.out.println(stringOpciones.cantidadAConvertir(moneda2,moneda1));
+        System.out.println(StringOpciones.cantidadAConvertir(moneda2,moneda1));
         cantidad=Seleccionar.cantidad();
         convercionObtenida=Conversor.monedas(moneda1,moneda2,cantidad);
-        String stringConvercion=stringOpciones.mostrarConvercion(moneda1,moneda2,convercionObtenida);
+        String stringConvercion=StringOpciones.mostrarConvercion(moneda1,moneda2,convercionObtenida);
         historial.escribirHistorial(stringConvercion);
         System.out.println(stringConvercion);
     }

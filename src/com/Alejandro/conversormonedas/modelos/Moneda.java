@@ -1,13 +1,7 @@
 package com.Alejandro.conversormonedas.modelos;
 
-import com.Alejandro.conversormonedas.servicio.ConsumoAPI;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Type;
 import java.util.*;
 
 public class Moneda {
