@@ -19,10 +19,10 @@ Mostrar información sobre las solicitudes.
 
 ## Instalacion
 Pasos para la instalacion
-* 
-* Descargar el JRE de java para poder ejecutarlo
-lone el proyecto o descárguelo
-*Ejecutar el archivo jar que hay dentro
+* Descargar e intalar el jdk 17 o superior.
+* Desde la consola posicionarse sobre el proyecto, dentro de la carpeta src.
+* Copilar el proyecto ejecutando `javac -cp . com/Alejandro/conversormonedas/menu/Menu.java` en la consola.Se craran archivos `.class` que serviran para ejecutar la aplicacion.
+* Ejecutar el proyecto colocando `javac -cp . com/Alejandro/conversormonedas/Main.java`.
 
 ## Autor ✒️
 Alejandro Verduguez
