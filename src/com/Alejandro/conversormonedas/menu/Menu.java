@@ -3,9 +3,7 @@ package com.Alejandro.conversormonedas.menu;
 import com.Alejandro.conversormonedas.historial.Historial;
 import com.Alejandro.conversormonedas.servicio.Conversor;
 
-import java.io.File;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
 
 public class Menu {
     public int opcionElegida=1;
@@ -17,12 +15,10 @@ public class Menu {
     double cantidad=0;
     public void iniciar() throws URISyntaxException {
         do{
-            System.out.println(Path.of(getClass().getResource(".").toURI()));
-//                    .replace("/","\\")
-//                    .replace("%20"," ")+"src\\com\\Alejandro\\conversormonedas");
-//            System.out.println(System.getProperty("user.dir"));
-            System.out.println(opcionElegida==1?StringOpciones.principal():"");
-            opcionElegida = opcionElegida==1?Seleccionar.opcion():opcionElegida;
+            if (opcionElegida==1){
+                System.out.println(StringOpciones.principal());
+                opcionElegida = Seleccionar.opcion();
+            }
             switch (opcionElegida){
                 case 0:
                     System.out.println("saliendo del programa");
@@ -47,9 +43,11 @@ public class Menu {
                     System.out.println("***********************************************************");
                     break;
             }
-            System.out.println(StringOpciones.opcionesFinales());
-            opcionElegida=Seleccionar.opcionesFinales();
-
+            if (opcionElegida!=0){
+                System.out.println(StringOpciones.opcionesFinales());
+                opcionElegida=Seleccionar.opcionesFinales();
+                System.out.println(opcionElegida==0?"saliendo del programa":"");
+            }
         }while (opcionElegida != 0);
     }
     private void convercion(String moneda1, String moneda2){

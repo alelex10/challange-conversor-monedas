@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class Historial {
 
@@ -14,13 +13,8 @@ public class Historial {
     public Historial() {
         try {
             file = File.createTempFile("historial", ".txt",
-                    new File(String.valueOf(Path.of(getClass().getResource(".").toURI()))));
-//                    new File(Thread.currentThread().getContextClassLoader()
-//                            .getResource("").getPath()
-//                            .replace("/","\\")
-//                            .replace("%20"," ")
-//                            +"src\\com\\Alejandro\\conversormonedas"));
-                    System.out.println(file.getPath());
+                    new File(String.valueOf(Path.of(getClass()
+                            .getResource(".").toURI()))));
             file.deleteOnExit();
         }catch (IOException | NullPointerException | URISyntaxException e){
             System.out.println(e.getMessage());
