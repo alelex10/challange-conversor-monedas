@@ -20,7 +20,7 @@ Pasos para la instalacion:
 * Descargar e intalar el jdk 17 o superior.
 * Desde la consola posicionarse sobre el proyecto, dentro de la carpeta src.
 * Copilar el proyecto ejecutando `javac -cp . com/Alejandro/conversormonedas/menu/Menu.java` en la consola.Se craran archivos `.class` que serviran para ejecutar la aplicacion.
-* Ejecutar el proyecto colocando `javac -cp . com/Alejandro/conversormonedas/Main.java`.
+* Ejecutar el proyecto colocando `java -cp . com/Alejandro/conversormonedas/Main.java` en la consola.
 
 ## Autor ✒️
 Alejandro Verduguez
