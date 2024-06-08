@@ -44,8 +44,8 @@ public class StringOpciones {
                 +"a que moneda desea convertir";
     }
 
-    static public String mostrarConvercion(String moneda1, String moneda2, Double convercion){
-        return String.format("la cantidad convertida de %s a %s es de : $%.2f",moneda1,moneda2,convercion);
+    static public String mostrarConvercion(String moneda1, String moneda2, Double convercion,Double cantidad){
+        return String.format("convercion de $%.2f %s a %s es de : $%.2f %s",cantidad,moneda1,moneda2,convercion,moneda2);
     }
     static public String convertirA(String moneda){
         return "que moneda desea convertir a %s:".formatted(moneda);

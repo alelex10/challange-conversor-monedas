@@ -54,7 +54,8 @@ public class Menu {
         System.out.println(StringOpciones.cantidadAConvertir(moneda2,moneda1));
         cantidad=Seleccionar.cantidad();
         convercionObtenida=Conversor.monedas(moneda1,moneda2,cantidad);
-        String stringConvercion=StringOpciones.mostrarConvercion(moneda1,moneda2,convercionObtenida);
+        String stringConvercion= StringOpciones
+                .mostrarConvercion(moneda2,moneda1,convercionObtenida,cantidad);
         historial.escribirHistorial(stringConvercion);
         System.out.println(stringConvercion);
     }
