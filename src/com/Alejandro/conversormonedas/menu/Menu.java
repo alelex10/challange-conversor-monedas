@@ -13,6 +13,7 @@ public class Menu {
     double cantidad=0;
     public void iniciar(){
         do{
+            System.out.println(System.getProperty("user.dir"));
             System.out.println(opcionElegida==1?StringOpciones.principal():"");
             opcionElegida = opcionElegida==1?Seleccionar.opcion():opcionElegida;
             switch (opcionElegida){

@@ -10,16 +10,19 @@ public class Historial {
     private File file;
     public Historial() {
         try {
-            file = File.createTempFile("historial", ".txt", new File("C:\\Users\\alelex10\\OneDrive - UTN.BA\\Proyectos\\proyectos java\\conversor-monedas\\archivos"));;
+            file = File.createTempFile("historial", ".txt",
+                    new File(System.getProperty("user.dir")
+                            +"\\src\\com\\Alejandro\\conversormonedas\\archivos"));
+            System.out.println(file.getPath());
             file.deleteOnExit();
-        }catch (IOException e){
+        }catch (IOException | NullPointerException e){
             System.out.println(e.getMessage());
         }
     }
     public void escribirHistorial(String conversion) {
     try {
         // Creamos un FileWriter para escribir en el archivo en modo append
-        FileWriter fw = new FileWriter(file, true); // <--- Notar el parámetro "true"
+        FileWriter fw = new FileWriter(file, true);
         // Escribimos algo en el archivo
         fw.write(conversion + "\n"); // Agregamos un salto de línea para separar las conversiones
         // No olvides cerrar el FileWriter para asegurarte de que los cambios se guarden
