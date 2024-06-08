@@ -12,7 +12,7 @@ public class Historial {
         try {
             file = File.createTempFile("historial", ".txt",
                     new File(System.getProperty("user.dir")
-                            +"\\src\\com\\Alejandro\\conversormonedas\\archivos"));
+                            +"\\src\\com\\Alejandro\\conversormonedas"));
             System.out.println(file.getPath());
             file.deleteOnExit();
         }catch (IOException | NullPointerException e){
