@@ -1,7 +1,11 @@
 package com.Alejandro.conversormonedas.menu;
 
-import com.Alejandro.conversormonedas.modelos.Historial;
+import com.Alejandro.conversormonedas.historial.Historial;
 import com.Alejandro.conversormonedas.servicio.Conversor;
+
+import java.io.File;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
 
 public class Menu {
     public int opcionElegida=1;
@@ -11,9 +15,12 @@ public class Menu {
     String moneda2="";
     double convercionObtenida=0;
     double cantidad=0;
-    public void iniciar(){
+    public void iniciar() throws URISyntaxException {
         do{
-            System.out.println(System.getProperty("user.dir"));
+            System.out.println(Path.of(getClass().getResource(".").toURI()));
+//                    .replace("/","\\")
+//                    .replace("%20"," ")+"src\\com\\Alejandro\\conversormonedas");
+//            System.out.println(System.getProperty("user.dir"));
             System.out.println(opcionElegida==1?StringOpciones.principal():"");
             opcionElegida = opcionElegida==1?Seleccionar.opcion():opcionElegida;
             switch (opcionElegida){

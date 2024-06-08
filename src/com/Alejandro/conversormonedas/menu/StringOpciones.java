@@ -23,11 +23,11 @@ public class StringOpciones {
     static String convercionDolares(){
         return """
                 **************************************************************
-                1) %s - Peso argentino --> USD - Dólar
-                2) %s - Boliviano boliviano --> USD - Dólar
-                3) %s - Real brasileño --> USD - Dólar
-                4) %s - Peso chileno --> USD - Dólar
-                5) %s - Peso colombiano --> USD - Dólar
+                1) %s - Peso argentino --> USD - Dolar
+                2) %s - Boliviano boliviano --> USD - Dolar
+                3) %s - Real brasileño --> USD - Dolar
+                4) %s - Peso chileno --> USD - Dolar
+                5) %s - Peso colombiano --> USD - Dolar
                 """.formatted(Moneda.monedasDisponibles.toArray());
     }
     static String otrasConverciones(){
@@ -38,7 +38,7 @@ public class StringOpciones {
                 3) %s Real brasileño
                 4) %s Peso chileno
                 5) %s Peso colombiano
-                6) %s Dólar estadounidense
+                6) %s Dolar estadounidense
                 
                 """.formatted(Moneda.monedasDisponibles.toArray())
                 +"a que moneda desea convertir";
